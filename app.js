@@ -81,11 +81,31 @@ const gameController = (function () {
 // const player1 = Player("Alice", "X");
 // const player2 = Player("Bob", "O");
 
-gameController.playRound(0);
-gameController.playRound(0);
-gameController.playRound(3);
-gameController.playRound(1);
-gameController.playRound(4);
-gameController.playRound(8);
-gameController.playRound(5);
+// gameController.playRound(0);
+// gameController.playRound(0);
+// gameController.playRound(3);
+// gameController.playRound(1);
+// gameController.playRound(4);
+// gameController.playRound(8);
+// gameController.playRound(5);
+
+const container = document.querySelector(".container");
+
+container.addEventListener("click", (e) =>{
+    if (e.target.classList.contains("box")){
+        const clickedIndex = parseInt(e.target.getAttribute("data-index"));
+        gameController.playRound(clickedIndex);
+        e.target.textContent = gameController.getTurn();
+    }
+});
+
+// boxes.forEach(box => {
+//     box.addEventListener("click", () =>{
+//         const clickedIndex = e.target.getAttribute("data-index");
+//         gameController.playRound(num);
+//     });
+
+// });
+
+
 

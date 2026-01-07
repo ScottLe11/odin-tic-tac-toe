@@ -1,0 +1,11 @@
+.container{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); Forces 3 rows of equal height */
+    min-height:  90vh;
+    border: black solid 3px;
+}
+
+.box{
+    border: black solid 3px;
+}
